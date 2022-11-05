@@ -1,0 +1,19 @@
+<h1>Lista de autores</h1>
+
+<p>
+    <form action="" method="get"> {% csrf_token %}
+
+        <input type="text" id="kword" name="kword" placeholder="Ingrese nombre">
+
+        <button type="submit">Consultar</button>
+
+    </form>
+</p>
+
+<ul>
+
+    {% for a in lista_autores %}
+        <li>{{ a.nombres }} - {{ a.apellidos }} - {{ a.nacionalidad }}</li>
+    {% endfor %}
+
+</ul>
